@@ -1,0 +1,532 @@
+@import "extend";
+@import "variables";
+
+
+
+
+
+
+.list-pages {
+
+  .banner {
+    overflow: hidden;
+    $height: 324px;
+    height: $height;
+
+    background-size: cover;
+    position: relative;
+
+
+
+    .icon-playnow {
+      background: url(../images/channel/banner/icon-playnow.png) center no-repeat;
+      width: 12px;
+      height: 24px;
+      margin-right: 5px;
+      float: left;
+    }
+
+    .banner-back {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+
+      li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        display: none;
+
+        &.animating {
+          opacity: 0;
+          z-index: 30;
+          display: block;
+        }
+        &.active {
+          z-index: 20;
+          display: block;
+        }
+      }
+
+      $backSize: cover;
+      .grand {
+        background: url(../images/channel/banner/bn_sub_grandopen_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      .notice {
+        background: url(../images/channel/banner/bn_sub_notice_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      .thetrain {
+        background: url(../images/channel/banner/bn_sub_thetrain_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      .vrgolf {
+        background: url(../images/channel/banner/bn_sub_vrgolf_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      .asaso {
+        background: url(../images/channel/banner/bn_sub_asaso_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      .youtubestar {
+        background: url(../images/channel/banner/bn_sub_youtubestar_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      .epiqvronly {
+        background: url(../images/channel/banner/bn_sub_epiqvronly_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      //11.24
+      .kimmyj {
+        background: url(../images/channel/banner/bn_sub_kimmyj_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+      //11.30
+      .kkuk {
+        background: url(../images/channel/banner/bn_sub_kkuk_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+
+      //01.02
+      .dalchi {
+        background: url(../images/channel/banner/bn_sub_dalchi_bg.jpg) 50% 50% no-repeat;
+        background-size: $backSize;
+      }
+
+
+    }
+
+
+
+
+
+    .banner-inner {
+      height: 250px;
+      position: relative;
+      margin: 0 auto;
+
+      @media screen and (max-width: $max-width-default-query) {
+        width: $max-width-medium;
+      }
+
+
+      .btns {
+        a {
+          &:first-child {
+            margin-right: 5px;
+          }
+          width: auto !important;
+          padding: 10px 20px !important;
+        }
+      }
+
+      .banner-item {
+        height: 250px;
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &.animating {
+          opacity: 0;
+          z-index: 30;
+          display: table;
+        }
+        &.active {
+          z-index: 20;
+          display: table;
+        }
+
+        &.banner-item.grand {
+          .img {
+            //background: url(../images/channel/banner/bn_sub_grandopen_bg.jpg) center no-repeat;
+          }
+        }
+        &.banner-item.notice {
+          .img {
+            background: url(../images/channel/banner/bn_sub_notice.jpg) center no-repeat;
+          }
+        }
+        &.banner-item.thetrain {
+          .img {
+            background: url(../images/channel/banner/bn_sub_thetrain.jpg) center no-repeat;
+          }
+        }
+        &.banner-item.vrgolf {
+          .img {
+            background: url(../images/channel/banner/bn_sub_vrgolf.jpg) center no-repeat;
+          }
+        }
+        &.banner-item.asaso {
+          .img {
+            background: url(../images/channel/banner/bn_sub_asaso.jpg) center no-repeat;
+          }
+        }
+        &.banner-item.youtubestar {
+          .img {
+            background: url(../images/channel/banner/bn_sub_youtubestar.jpg) center no-repeat;
+          }
+        }
+        &.banner-item.epiqvronly {
+          .img {
+            background: url(../images/channel/banner/bn_sub_epiqvronly.jpg) center no-repeat;
+          }
+        }
+        //11.24
+        &.banner-item.kimmyj {
+          .img {
+            background: url(../images/channel/banner/bn_sub_kimmyj.jpg) center no-repeat;
+          }
+        }
+        //11.30
+        &.banner-item.kkuk {
+          .img {
+            background: url(../images/channel/banner/bn_sub_kkuk.jpg) center no-repeat;
+          }
+        }
+        //0102
+        &.banner-item.dalchi {
+          .img {
+            background: url(../images/channel/banner/bn_sub_dalchi.jpg) center no-repeat;
+          }
+        }
+
+        .img {
+          width: 820px;
+          height: 250px;
+          float: left;
+
+          @media screen and (max-width: $max-width-default-query) {
+            width: 580px;
+          }
+        }
+        .desc {
+          color: white;
+          //float: left;
+          padding: 0 0 0 20px;
+          text-align: left;
+          font-size: 16px;
+          display: table-cell;
+          vertical-align: middle;
+
+          //@media screen and (max-width: $max-width-default-query) {
+          //  width: 480px;
+          //}
+
+          .desc1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            width: 500px;
+            @media screen and (max-width: $max-width-default-query) {
+              width: 480px;
+            }
+          }
+          .desc2 {
+            //width: 500px;
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+          .link {
+            color: inherit;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+
+    .left-arrow {
+      width: 28px;
+      height: 53px;
+      background: url(../images/channel/arrow_left.png) no-repeat;
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      margin: -26px 0 0 0;
+      z-index: 200;
+
+      @media screen and (max-width: $max-width-default-query) {
+        left: 20px;
+      }
+    }
+    .right-arrow {
+      width: 28px;
+      height: 53px;
+      background: url(../images/channel/arrow_right.png) no-repeat;
+      position: absolute;
+      right: -50px;
+      top: 50%;
+      margin: -26px 0 0 ;
+      z-index: 200;
+      @media screen and (max-width: $max-width-default-query) {
+        right: 20px;
+      }
+    }
+
+
+    .banner-container {
+      //max-width: $max-width-default;
+      //margin: 0 auto;
+      padding-top: 74px;
+      position: relative;
+      z-index: 100;
+
+      .banner-box {
+        max-width: $max-width-default;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+
+
+
+    }
+
+
+  }
+
+
+
+  #Following  {
+    .list-container {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+    }
+
+  }
+
+  #Rank {
+    .list-container {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+    }
+  }
+
+  .list-container {
+    &.videos {
+      margin-right: -20px;
+      font-size: 0;
+    }
+
+    .ranking-list {
+
+      height: 164px;
+      background-color: white;
+      border-top: 1px solid $color-gray3;
+      padding: 40px;
+      :first-child {
+        border-top: 0;
+      }
+      .rank-area {
+        width: 84px;
+        height: 84px;
+        float: left;
+        margin-right: 40px;
+        text-align: center;
+        font-size: 40px;
+        line-height: 2;
+        font-weight: 400;
+
+        &.gold {
+          color: $color-rank-gold;
+          background: url("../images/channel/rank_gold.png") no-repeat center;
+          line-height: 1.5;
+        }
+        &.silver {
+          color: $color-rank-silver;
+          background: url("../images/channel/rank_silver.png") no-repeat center;
+          line-height: 1.5;
+        }
+        &.bronze {
+          color: $color-rank-bronze;
+          background: url("../images/channel/rank_bronze.png") no-repeat center;
+          line-height: 1.5;
+        }
+      }
+      .point-area {
+        width: 70px;
+        float: left;
+        .point {
+          display: inline-block;
+          height: 19px;
+          width: 44px;
+          margin: 32px 0;
+          padding-left: 18px;
+          font-size: 14px;
+          &.up {
+            color: $color-rank-up;
+            background: url("../images/channel/rank_up.png") no-repeat left 2px;
+          }
+          &.down {
+            color: $color-rank-down;
+            background: url("../images/channel/rank_down.png") no-repeat left 2px;
+          }
+          &.new {
+            font-size: 0;
+            padding: 0;
+            background: url("../images/channel/rank_new.png") no-repeat left 2px;
+          }
+          &.no {
+            color: $color-rank-no;
+            background: url("../images/channel/rank_no.png") no-repeat left 2px;
+          }
+        }
+      }
+      .channel-profile {
+        float: left;
+      }
+    }
+
+    .following-list {
+      padding: 30px;
+      background-color: white;
+      float: left;
+      width: ($max-width-default/2);
+      height: 145px;
+      border-right: 1px solid $color-gray3;
+      border-bottom: 1px solid $color-gray3;
+
+      @media screen and (max-width: $max-width-default-query) {
+        border-right: 0;
+        width: $max-width-medium;
+      }
+
+      &.even {
+        border-right: 0;
+      }
+
+      .content-wrap {
+        width: 420px;
+        height: auto;
+        @media screen and (max-width: $max-width-default-query) {
+          width: 700px;
+        }
+      }
+
+    }
+
+    .channel-item {
+      background-color: white;
+      margin-bottom: 20px;
+
+      .content-wrap {
+        .desc {
+          margin: 2px 0 4px 0;
+        }
+      }
+
+      .line {
+        height: 1px;
+        background-color: $color-gray3;
+        margin: 0 0 0 30px;
+      }
+      .profile-wrap {
+        padding: 30px 60px 25px 30px;
+
+      }
+      .list-wrap {
+        position: relative;
+        padding: 15px 0 28px 30px;
+        .list-arrow-left {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 77px;
+          width: 38px;
+          height: 70px;
+          background: rgba(0,0,0,0.3) url(../images/channel/arrow_list_left.png) no-repeat center;
+          z-index: 100;
+          &.active {
+            display: block;
+          }
+        }
+        .list-arrow-right {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 77px;
+          width: 38px;
+          height: 70px;
+          background: rgba(0,0,0,0.3) url(../images/channel/arrow_list_right.png) no-repeat center;
+          z-index: 100;
+          &.active {
+            display: block;
+          }
+        }
+        .list-inner {
+          overflow: hidden;
+          //padding-top: 5px;
+          //padding-left: 5px;
+          //margin-left: -5px;//premium icon으로 인한 이동
+
+          .list-body {
+            width: 99999px;
+            font-size: 0;
+
+            .nothing-list-txt {
+              font-size: 13px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
+
+.channel-profile {
+
+  float: left;
+
+  .profile-image {
+    position: relative;
+    float: left;
+    margin-right: 25px;
+    width: 84px;
+    height: 84px;
+    border-radius: 42px;
+    background: center no-repeat;
+    background-size: cover;
+
+    .icon-new {
+      background: url("../images/common/icon_new.png") no-repeat;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+
+  .content-wrap {
+    height: 84px;
+    display: inline-block;
+
+    .channel {
+      font-size: 22px;
+      color: $color-title;
+      a {
+        color: $color-title;
+        font-weight: 400;
+      }
+    }
+    .desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: $color-default;
+      //word-break: break-all;
+    }
+  }
+}

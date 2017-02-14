@@ -1,0 +1,52 @@
+
+$max-width-large: 1560px;
+$max-width-default: 1420px;
+$medium-width: 1280px;
+$max-width-medium: 1060px;
+$min-width: 940px;
+
+$max-width-large-query: $max-width-large + 20;
+$max-width-default-query: $max-width-default + 20;
+$max-width-medium-query: $max-width-medium + 20;
+$medium-width-query: $medium-width + 20;
+
+
+
+
+
+$font-family: Soleil, Noto Sans KR, sans-serif !default;
+$font-family-safari: Noto Sans KR, sans-serif !default;
+
+$color-title: #272930;
+$color-default: #64686f;
+
+$color-blue: #4c74ff;
+
+$color-gray1: #8b93a0;
+$color-gray2: #b4b6bc;
+$color-gray3: #e7eaed;
+$color-gray4: #f1f4f6;
+$color-gray5: #eaedef;
+$color-gray6: #d4d4d6;
+$color-gray7: #F8F9FA;
+
+$color-hover: #e8e9ec;
+
+$color-red: #e01010;
+$color-red2: #E21339;
+$color-acua: #17f2f4;
+
+$color-rank-gold: #edb744;
+$color-rank-silver: #bdbec1;
+$color-rank-bronze: #db9a66;
+
+$color-rank-up: #bf25ff;
+$color-rank-down: $color-blue;
+$color-rank-no: $color-gray2;
+
+$color-premium: #7850F6;
+$color-vrstar: #ffb800;
+$color-ucc: #bf42f2;
+
+
+

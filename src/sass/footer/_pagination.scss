@@ -1,0 +1,96 @@
+/**
+ * ===================================================================
+ * 페이지네이션 - <ul>
+ * ===================================================================
+ */
+
+@mixin pagination($font-size, $box-size, $box-color, $font-color, $font-color-active, $font-color-disabled, $img-prev, $img-next, $img-prev-hover, $img-next-hover) {
+
+  $box-padding: ($box-size - $font-size - 2) / 2; // 박스 위아래 padding
+
+  display: inline-block;
+  font-size: $font-size;
+
+  li {
+    display: inline;
+
+    a, span {
+      position: relative;
+      float: left;
+      padding: $box-padding 0;
+      width: $box-size;
+      line-height: 1;
+      margin-left: -1px;
+      text-align: center;
+      color: $font-color;
+      background-color: #fff;
+      border: 1px solid $box-color;
+
+      &:hover, &:focus, &:active {
+        color: $font-color-active;
+        //border-bottom: 2px solid $font-color-active;
+        //padding-bottom: $box-padding;
+      }
+    }
+
+    &.active {
+      a, a:hover, a:focus, a:active, span, span:hover, span:focus, span:active {
+        color: $font-color-active;
+        border-bottom: 2px solid $font-color-active;
+        padding-bottom: $box-padding - 1;
+      }
+    }
+
+    &.disabled {
+      a, a:hover, a:focus, a:active, span, span:hover, span:focus, span:active {
+        color: $font-color-disabled;
+        border: 1px solid $box-color;
+        padding-bottom: $box-padding;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // prev
+  li.prev {
+    a, span {
+      background-image: url($img-prev);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 9px 15px;
+      height: $box-size;
+
+      &:hover, &:focus, &:active {
+        background-image: url($img-prev-hover);
+      }
+    }
+
+    &.disabled {
+      a, a:hover, a:focus, a:active, span, span:hover, span:focus, span:active {
+        background-image: url($img-prev);
+      }
+    }
+  }
+
+  // next
+  li.next {
+    a, span {
+      background-image: url($img-next);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 9px 15px;
+      height: $box-size;
+
+      &:hover, &:focus, &:active {
+        background-image: url($img-next-hover);
+      }
+    }
+
+    &.disabled {
+      a, a:hover, a:focus, a:active, span, span:hover, span:focus, span:active {
+        background-image: url($img-next);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,149 @@
+/**
+ * ===================================================================
+ * 게시판
+ * ===================================================================
+ */
+$board-line-top: $color-gray1; // #8b93a0
+$board-line: $color-gray6; // #d4d4d6
+
+$pagination-pos: center; // 페이지네이션 가로정렬
+$pagination-font-size: 16px;
+$pagination-box-size: 40px;
+$pagination-box-color: $color-gray6;
+$pagination-font-color: $color-gray6;
+$pagination-font-color-active: $color-title; // #272930
+$pagination-font-color-disabled: $color-gray6;
+$pagination-img-prev: '../images/footer/btn_prev.png';
+$pagination-img-next: '../images/footer/btn_next.png';
+$pagination-img-prev-hover: '../images/footer/btn_prev_hover.png';
+$pagination-img-next-hover: '../images/footer/btn_next_hover.png';
+
+.footer-wrap {
+
+  // 게시판 리스트
+  .board-list {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.85;
+    text-align: center;
+
+    a {
+      color: $color-title;
+      &:hover { color: $color-default; }
+    }
+
+    td:nth-of-type(1) { // 번호
+      width: 68px;
+    }
+    td:nth-of-type(2) { // 제목
+      text-align: left;
+      //width: 732px;
+    }
+    td:nth-of-type(3) { // 번호
+      width: 140px;
+    }
+
+    td, th {
+      border-bottom: 1px solid $board-line;
+      padding: 13px;
+    }
+    tr:last-child {
+      td, th {
+        border-bottom: 1px solid $board-line-top;
+      }
+    }
+
+    .board-top {
+      td, th {
+        border-top: 1px solid $board-line-top;
+        border-bottom: 1px solid $board-line-top;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+
+  .board-pagination-pos { // 페이지네이션 가로정렬
+    text-align: $pagination-pos;
+    margin-top: 30px;
+  }
+  .board-pagination { // <ul>
+    @include pagination($pagination-font-size, $pagination-box-size, $pagination-box-color, $pagination-font-color, $pagination-font-color-active, $pagination-font-color-disabled, $pagination-img-prev, $pagination-img-next, $pagination-img-prev-hover, $pagination-img-next-hover);
+  }
+
+
+  // 게시판 뷰
+  .board-view {
+    font-size: 13px;
+    line-height: 1.85;
+
+    .board-view-title {
+      border-top: 1px solid $board-line-top;
+      border-bottom: 1px solid $board-line-top;
+      font-size: 14px;
+      padding: 13px 22px;
+      overflow: hidden;
+      &:after { clear: both; }
+
+      span:first-child {
+        font-weight: bold;
+      }
+      span:last-child {
+        float: right;
+      }
+    }
+
+    .board-view-content {
+      border-bottom: 1px solid $board-line-top;
+      padding: 35px 22px 55px 22px;
+      text-align: justify;
+      min-height: 500px;
+    }
+
+    .board-view-btn {
+      margin-top: 20px;
+      overflow: hidden;
+      &:after { clear: both; }
+
+      div {
+        display: inline-block;
+
+        &:last-child {
+          float: right;
+        }
+
+        .f-btn:not(:last-child) {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+
+  // 버튼
+  .f-btn {
+    display: inline-block;
+    font-size: 13.5px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 21px;
+    border: 1px solid $color-title;
+    border-radius: 2px;
+  }
+
+  .f-btn-white {
+    color: $color-title;
+    background-color: #fff;
+    &:hover {
+      color: $color-default;
+    }
+  }
+
+  .f-btn-black {
+    color: #fff;
+    background-color: $color-title;
+    &:hover {
+      color: $color-gray3;
+    }
+  }
+
+}

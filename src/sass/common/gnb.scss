@@ -1,0 +1,449 @@
+@import "../variables";
+@import "../extend";
+
+
+
+
+
+#header {
+
+
+  .gnb {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 64px;
+
+    .back {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+
+      background: url("../images/common/gnb_bg.png") no-repeat center center;
+      background-size: cover;
+
+      .index &, .channel &, .premium &, .vrstar & {
+        opacity: 0;
+      }
+
+    }
+
+
+    .side {
+      display: inline-block;
+      a {
+        display: block;
+        background: url("../images/common/menu.png") no-repeat;
+        width: 28px;
+        height: 28px;
+        .svg & {
+          background: url("../images/common/menu.svg") no-repeat;
+        }
+      }
+
+    }
+
+    .logo {
+      display: inline-block;
+      margin-left: 17px;
+      a {
+        display: block;
+        background: url("../images/common/epiqvr_bi_white.png") no-repeat;
+        width: 90px;
+        height: 30px;
+        .svg & {
+          background: url("../images/common/epiqvr_bi_white@2x.png") no-repeat;
+          background-size: 90px 30px;
+        }
+      }
+    }
+
+
+    .inner {
+      position: relative;
+      max-width: $max-width-default;
+      margin: 0 auto;
+      padding: 13px 0;
+      height: 100%;
+      @media screen and (max-width: $max-width-default-query) {
+        padding: 13px 20px;
+      }
+    }
+
+    .left {
+      float: left;
+      text-align: left;
+      margin-top: 5px;
+    }
+    .right {
+      float: right;
+      display: inline-block;
+      text-align: right;
+      font-size: 0;
+      position: relative;
+    }
+
+    .menu {
+      width: 500px;
+      position: absolute;
+      left: 50%;
+      margin-left: -250px;
+      li {
+        margin-left: 18px;
+        &:first-child {
+          margin-left: 0;
+        }
+        display: inline-block;
+        &.active {
+          a {
+            background: white;
+            color: #4c74ff;
+          }
+        }
+        a {
+          border-radius: 45px;
+          display: inline-block;
+          padding: 6px 22px;
+          font-size: 16px;
+          color: white;
+          font-weight: 400;
+          height: 38px;//메뉴 움직임으로 인한 추가
+
+
+        }
+      }
+    }
+
+    $search-bar-wid: 200px;
+    .search-bar {
+      display: inline-block;
+      width: $search-bar-wid;
+      height: 38px;
+      border-radius: 100px;
+      border: solid 2px #ffffff;
+      margin-right: 18px;
+      text-align: left;
+      background: url("../images/common/search_bg.png") no-repeat 168px center;
+      float: left;
+      position: relative;
+
+      .svg & {
+        background: url("../images/common/search_bg@2x.png") no-repeat 168px center;
+        background-size: 17px 17px;
+      }
+
+      input {
+        font-size: 13px;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        height: 100%;
+        border: 0;
+        margin: -1px 10px 0 18px;
+
+        .msie & {
+          margin-top: 1px;
+        }
+
+        width: ($search-bar-wid - 60px);
+        font-weight: 400;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: 0;
+
+        &[placeholder] {
+          //color: $color-gray6;
+        }
+
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+          color: $color-gray6;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: $color-gray6;
+          opacity:  1;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: $color-gray6;
+          opacity:  1;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: $color-gray6;
+        }
+      }
+
+      .search-btn {
+        display: inline-block;
+        width: 38px;
+        height: 34px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    }
+
+    .login-btn {
+      float: left;
+      color: white;
+      padding: 8px 0;
+      font-size: 15px;
+      font-weight: 400;
+      .login-icon {
+        width: 11px;
+        height: 15px;
+        background: url("../images/common/login_icon.png") no-repeat center;
+        display: inline-block;
+        .svg & {
+          background: url("../images/common/login_icon.svg") no-repeat center;
+        }
+      }
+    }
+
+    .profile-area {
+      float: right;
+
+      &.active {
+        & + .profile-popup {
+          display: block;
+          opacity: 1;
+        }
+      }
+
+      .profile-image {
+        width: 38px;
+        height: 38px;
+        border-radius: 38px;
+        background-color: white;
+        display: inline-block;
+        background-size: cover;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .arrow {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 4.5px 0 4.5px;
+        border-color: white transparent transparent transparent;
+        float: right;
+        margin: 18px 0 0 5px;
+
+      }
+    }
+
+    .profile-popup {
+      display: none;
+      opacity: 0;
+      text-align: center;
+      width: 261px;
+      height: 202px;
+      background-color: white;
+      border-radius: 5px;
+      top: 61px;
+      padding: 20px 24px 24px 24px;
+      position: absolute;
+      right: 0;
+      @extend .dropShadow;
+
+      &.active {
+        display: block;
+      }
+
+      .welcome {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-title;
+        .user-id {
+          display: inline-block;
+          margin-bottom: 14px;
+        }
+        a {
+          margin-bottom: 10px;
+          font-weight: 400;
+          color: white;
+          &.profile-channel {
+            background-color: $color-blue;
+          }
+          &.profile-logout {
+            background-color: $color-gray1;
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+  .side-menu {
+    display: none;
+    position: fixed;
+    text-align: left;
+    width: 400px;
+    height: 100%;
+    background-color: #2F3239;
+    left: -400px;
+    top: 0;
+    color: white;
+    //overflow-y: auto;
+
+    .scroll-inner {
+      height: 100%;
+      overflow: auto;
+    }
+
+    .more {
+      padding: 10px 40px;
+      .more-btn {
+        font-size: 13px;
+        color: $color-gray2;
+        display: inline-block;
+      }
+      .arrow {
+        //16.11.10
+        //display: inline-block;
+        //width: 0;
+        //height: 0;
+        //border-left: 4px solid transparent;
+        //border-right: 4px solid transparent;
+        //border-top: 4px solid $color-gray2;
+        //padding-top: 2px;
+      }
+    }
+
+    .head {
+      padding: 24px 40px;
+      border-bottom: 1px solid #282c31;
+      .profile {
+        .profile-image {
+
+          a {
+            width: 60px;
+            height: 60px;
+            display: block;
+            background: url("../images/common/icon_not_login.png") no-repeat center;
+            background-size: contain;
+            float: left;
+            margin-right: 20px;
+          }
+
+          img {
+            vertical-align: middle;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+          }
+        }
+        .user-name {
+          font-size: 18px;
+          vertical-align: middle;
+          color: white;
+          a {
+            color: white;
+            float: left;
+            padding: 16px 0;
+          }
+        }
+        .setting {
+          float: right;
+          padding: 18px 0;
+        }
+      }
+    }
+
+    .section {
+      padding: 20px 0;
+      .title {
+        font-size: 14px;
+        color: $color-acua;
+        margin-bottom: 20px;
+        padding: 0 40px;
+      }
+
+      li {
+        > a {
+          display: block;
+          font-size: 17px;
+          color: white;
+          padding: 10px 40px;
+          &:hover {
+            background-color: $color-blue;
+          }
+        }
+      }
+
+      .none-list {
+        font-size: 13px;
+        color: $color-gray1;
+        padding: 0 40px;
+        a {
+          margin-top: 10px;
+          display: block;
+          color: white;
+          text-decoration: underline;
+        }
+      }
+
+      .channel-list {
+        .channel-item {
+          a {
+            padding: 5px 40px;
+          }
+        }
+      }
+
+
+      .category-list {
+        .category-item {
+          //a.list-1:after {
+          //  margin-left: 5px;
+          //  display: inline-block;
+          //  content: '';
+          //  width: 47px;
+          //  height: 18px;
+          //  background: url("../images/common/icon_epiqvr_only.png") no-repeat center center;
+          //  position: relative;
+          //  top: 3px;
+          //
+          //}
+        }
+
+
+
+      }
+
+      .default-list {
+      }
+
+
+      .channel-list {
+        .channel-item {
+
+          .profile-image {
+            margin-right: 15px;
+            img {
+              width: 36px;
+              height: 36px;
+              vertical-align: middle;
+              border-radius: 18px;
+            }
+          }
+          .user-name {
+            vertical-align: middle;
+            font-size: 16px;
+            color: white;
+          }
+
+
+
+        }
+      }
+    }
+
+  }
+
+}

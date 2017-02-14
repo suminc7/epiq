@@ -1,0 +1,138 @@
+
+@import "../variables";
+
+
+.footer.about {
+
+  #content {
+
+    .newline {
+      display: none;
+      @media screen and (max-width: $medium-width-query) {
+        display: block;
+      }
+    }
+
+    padding-bottom: 0 !important;
+
+    .about-container {
+      text-align: center;
+    }
+
+    .list {
+      width: 100%;
+      display: table;
+
+      .desc-container {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .title {
+        font-size: 46px;
+        color: #323436;
+        margin-bottom: 20px !important;
+        .sub {
+          font-size: 18px;
+        }
+      }
+      .desc {
+        font-size: 18px;
+        line-height: 1.7;
+        color: $color-default;
+      }
+    }
+
+    .list-1 {
+      background: url(../images/about/bg_top.jpg) no-repeat center;
+      background-size: cover;
+      height: 774px;
+
+      .title, .desc {
+        color: white !important;
+      }
+
+      .desc-container {
+        padding-top: 125px;
+        vertical-align: top;
+      }
+    }
+
+    .list-2 {
+      position: relative;
+      height: 800px;
+      .desc-container {
+        //padding-top: 326px;
+      }
+      .graphic {
+        position: absolute;
+        left: 50%;
+        top: -340px;
+        background: url(../images/about/bg_02.png) no-repeat center;
+        background-size: cover;
+        width: 2200px;
+        height: 1043px;
+        margin-left: -1100px;
+      }
+      .hmd {
+        margin-top: 120px;
+      }
+    }
+
+    .list-3 {
+      background: url(../images/about/bg_03.jpg) no-repeat center;
+      background-size: cover;
+      height: 800px;
+      .desc-container {
+        //padding-top: 326px;
+      }
+      .title, .desc {
+        color: white !important;
+      }
+    }
+
+    .list-4 {
+      background: url(../images/about/bg_04.jpg) no-repeat center;
+      background-size: cover;
+      height: 800px;
+      .desc-container {
+        padding-top: 109px;
+        vertical-align: top;
+      }
+      .title {
+        color: white !important;
+      }
+      .desc {
+        color: $color-gray1;
+      }
+    }
+
+    .list-5 {
+      background: url(../images/about/bg_05.jpg) no-repeat center;
+      background-size: cover;
+      height: 800px;
+      .desc-container {
+        text-align: left;
+        margin: 0 auto;
+      }
+      .title {
+        width: $max-width-medium;
+        margin: 0 auto;
+        padding: 0 70px;
+      }
+      .desc {
+        color: $color-gray1;
+        width: $max-width-medium;
+        margin: 0 auto;
+        padding: 0 70px;
+      }
+    }
+
+
+
+
+
+  }
+
+
+}

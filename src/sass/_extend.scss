@@ -1,0 +1,43 @@
+@import "variables";
+
+.boxShadow {
+  -webkit-box-shadow: 0 2px 0 0 $color-gray3;
+  -moz-box-shadow: 0 2px 0 0 $color-gray3;
+  box-shadow: 0 2px 0 0 $color-gray3;
+}
+
+.boxShadow2 {
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.dropShadow {
+  -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.10);
+  -moz-box-shadow: 0 0 3px 0 rgba(0,0,0,0.10);
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.10);
+}
+
+
+.setWidth {
+  @media screen and (max-width: $max-width-default-query) {
+    width: $max-width-medium;
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}

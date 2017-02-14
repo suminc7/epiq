@@ -1,0 +1,68 @@
+@import "variables";
+
+.search {
+
+  .list-container {
+    &.video-section {
+      min-height: inherit !important;
+    }
+    &.channel-section {
+      min-height: inherit !important;
+    }
+  }
+
+
+  .search-head {
+    background-color: white;
+    font-size: 30px;
+    .result-title {
+      padding: 35px 0;
+      .title {
+        color: $color-blue;
+        font-weight: 400;
+      }
+      color: $color-title;
+      font-weight: 400;
+    }
+
+  }
+
+  .channel-item {
+    .list-length {
+      float: none;
+      padding: 20px 30px;
+      font-weight: 400;
+    }
+  }
+
+  .nothing-list {
+    .list-length {
+      display: none;
+    }
+  }
+
+  .list-length {
+    float: left;
+    font-size: 15px;
+    color: $color-title;
+    .leng-item {
+      color: $color-gray1;
+    }
+
+    .more-btn {
+      float: right;
+      font-size: 13px;
+      display: inline-block;
+      color: $color-title;
+
+      padding-right: 11px;
+      background: url("../images/common/icon_more_r.png") no-repeat right center;
+      .svg & {
+        background: url("../images/common/icon_more_r.svg") no-repeat right center;
+      }
+
+    }
+
+  }
+
+}

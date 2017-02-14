@@ -1,0 +1,276 @@
+@import "variables";
+
+
+
+
+.register {
+  #content {
+    background: url("../images/login/login_bg.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+
+#content {
+
+
+  .agreement {
+    text-align: left;
+    width: 560px;
+    //height: 695px;
+    background-color: #fff;
+    margin: 0 auto;
+
+    .inner {
+      padding: 62px 80px 80px;
+    }
+
+    .head {
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 11px;
+      color: #64686f;
+    }
+
+    .title {
+      font-size: 30px;
+      color: $color-title;
+      margin-bottom: 20px;
+    }
+
+    .checkbox {
+      .checkbox-label {
+        color: $color-title;
+        font-weight: 400;
+      }
+
+      .checkbox-label.last {
+        font-weight: 700;
+      }
+
+      &.agree3 {
+        margin-right: 5px;
+      }
+
+      &.email {
+        margin-right: 10px;
+      }
+    }
+
+    .require {
+      font-size: 12px;
+      color: #4c74ff;
+      &.gray {
+        color: #8b93a0;
+      }
+    }
+
+    .agree-box {
+      padding: 12px 15px 0;
+      height: 92px;
+      border: 1px solid #d4d4d6;
+      overflow: auto;
+    }
+
+  }
+
+
+  .join-container {
+    .form-inner {
+      display: none;
+    }
+    &.agree {
+      .form-inner {
+        display: block;
+      }
+      .agreement {
+        display: none;
+      }
+    }
+  }
+  .login-container {
+
+    .btn-login {
+      margin-top: 20px;
+    }
+
+    .agreement {
+      display: none;
+    }
+    &.agree {
+      .form-inner {
+        display: none;
+      }
+      .agreement {
+        display: block;
+      }
+      .link-others {
+        visibility: hidden;
+      }
+    }
+
+    .form {
+      padding: 62px 80px 44px 80px;
+    }
+
+    .terms {
+      margin-bottom: 20px;
+    }
+  }
+
+  .join-container, .login-container {
+
+    padding-top: 100px;
+    .form-inner {
+      margin: 0 auto;
+      width: 560px;
+      height: 695px;
+      background-color: white;
+
+      .sns {
+        .desc {
+          font-size: 13px;
+          color: #8b93a0;
+          margin-bottom: 30px;
+        }
+        a {
+          margin: 0 25px;
+          img {
+            width: 80px;
+          }
+        }
+      }
+
+    }
+    .link-others {
+      display: inline-block;
+      color: white;
+      font-size: 13px;
+      margin-top: 10px;
+      a {
+        font-size: inherit;
+        color: $color-acua;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .form {
+    padding: 62px 80px 80px 80px;
+    text-align: left;
+
+    input[type=text], input[type=password] {
+      outline: none;
+      height: 54px;
+      border: 0;
+      border-bottom: 1px solid #dbdddf;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 300;
+      &:focus {
+        border-top: 0 !important;
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 1px solid $color-gray1 !important;
+        //&+span button {
+        //  @extend .btn-def-black;
+        //}
+      }
+
+    }
+
+    .title {
+      font-size: 30px;
+      color: #231f20;
+      margin-bottom: 33px;
+      font-weight: 500;
+    }
+    .error {
+      font-size: 11px;
+      color: $color-red;
+      float: left;
+      display: none;
+    }
+    .form-group {
+
+      &.alert {
+        .error {
+          display: block;
+        }
+        input[type=text], input[type=password] {
+          border-bottom: 1px solid $color-red !important;
+        }
+      }
+      &.success {
+        .error {
+          display: block;
+          color: $color-blue;
+        }
+        input[type=text], input[type=password] {
+          border-bottom: 1px solid $color-blue !important;
+        }
+
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    }
+
+
+
+    .input-group {
+      position: relative;
+      .btn-def {
+        position: absolute;
+        bottom: 13px;
+        right: 0;
+      }
+
+
+    }
+
+    .terms {
+      text-align: center;
+      font-size: 13px;
+      padding-top: 10px;
+      margin-bottom: 40px;
+      color: $color-title;
+      a {
+        color: $color-title;
+        text-decoration: underline;
+      }
+    }
+
+    .remember {
+      font-size: 13px;
+      color: #8b93a0;
+      margin-top: 18px;
+      .checkbox {
+        margin-right: 10px;
+      }
+      .find-passwd {
+        color: inherit;
+        float: right;
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+
+
+}
+

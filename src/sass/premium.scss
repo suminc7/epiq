@@ -1,0 +1,68 @@
+
+@import "variables";
+
+.premium {
+  .list-container {
+
+    .ranking-list {
+      height: 192px;
+      padding: 54px 15px 54px 40px;
+
+      .video-more {
+        margin-top: -40px;
+      }
+
+      .video-thumb {
+        float: left;
+        margin-top: -54px;
+      }
+
+      .video-info {
+        float: left;
+        margin-top: -24px;
+        padding: 0 0 0 30px;
+
+        .video-category {
+          font-size: 12px;
+          color: $color-blue;
+          margin-bottom: 5px;
+        }
+        .video-content {
+
+          .video-title {
+            font-size: 22px;
+            line-height: 1.3;
+            color: $color-title;
+            margin: -2px 0 18px 0;
+            @media screen and (max-width: $max-width-default-query) {
+              width: 400px;
+            }
+          }
+          .user-thumb {
+            a {
+              width: 56px;
+              height: 56px;
+              border-radius: 28px;
+              display: block;
+              background: center no-repeat;
+              background-size: cover;
+            }
+            img {
+
+            }
+          }
+          .content-meta {
+            display: inline-block;
+            a.channel {
+              display: block;
+              font-size: 16px;
+              color: $color-default;
+              margin: -2px 0 7px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,185 @@
+
+
+
+
+
+.form-group {
+  .text-length {
+    float: right;
+    margin-top: -22px;
+  }
+}
+//1
+
+
+
+.card {
+
+  .card-header {
+
+    .right-btns {
+      float: right;
+      margin-top: -30px;
+      > .btn {
+        margin-left: 10px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    .btn-center-box {
+      text-align: center;
+      .btn {
+        margin: 0 10px;
+      }
+    }
+
+    td.commands {
+      .btn-default {
+        width: 35px;
+      }
+    }
+
+
+
+    .fileinput {
+      .btn {
+        margin-right: 8px;
+      }
+    }
+
+
+
+  }
+
+
+}
+
+
+.list-table {
+  tr.disabled {
+    background-color: #FAFAFA;
+    color: #ccc !important;
+  }
+  th {
+    &.id {
+      width: 80px;
+    }
+    &.title {
+      min-width: 200px;
+    }
+    &.language {
+      width: 90px;
+    }
+    &.activation {
+      width: 90px;
+    }
+    &.date {
+      width: 150px;
+    }
+    &.area {
+      width: 180px;
+    }
+    &.dateUpdated {
+      width: 150px;
+    }
+    &.updatedID {
+      width: 150px;
+    }
+    &.commands {
+      width: 150px;
+    }
+  }
+
+  .btn {
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+.sorting-table {
+
+  th.id {
+    width: 100px;
+  }
+  th.sender {
+    width: 150px;
+  }
+  th.date {
+    width: 200px;
+  }
+  th.lang {
+    width: 150px;
+  }
+  th.enabled {
+    width: 150px;
+  }
+  th.menu {
+    width: 150px;
+  }
+
+  .zmdi-menu {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .list-item {
+    cursor: pointer;
+  }
+
+}
+
+
+//.btn {
+//  display: inline-block;
+//  margin: 0 5px 7px 0;
+//}
+
+
+.profile-area {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  border-radius: 30px;
+}
+
+
+.glyphicon-chevron-up:before {
+  color: black;
+}
+
+.glyphicon-chevron-down:before {
+  color: black;
+}
+
+.bootstrap-datetimepicker-widget {
+  .btn-primary {
+    color: black !important;
+  }
+
+  table td.today:before{
+    content:'';
+    display:inline-block;
+    border: 0 solid transparent;
+  }
+
+  .btn:not(.palette-White):not(.btn-default) {
+    color: inherit;
+  }
+}
+
+
+
+
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+  margin-top: 7px;
+  padding-top: 0;
+}
+
+

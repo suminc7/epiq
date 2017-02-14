@@ -1,0 +1,42 @@
+@import "variables";
+
+.vrstar {
+
+  #Introduction {
+    //width: $max-width-default;
+    margin: 0 auto;
+    text-align: center;
+    .intro-inner {
+      background-color: white;
+      padding: 80px 0;
+      margin: 0 auto;
+      @media screen and (max-width: $max-width-default-query) {
+        max-width: $max-width-medium;
+      }
+
+      .title {
+        font-weight: 400;
+        font-size: 24px;
+        color: $color-title;
+        margin-bottom: 15px;
+
+      }
+
+      .desc {
+        color: $color-title;
+        font-size: 13px;
+        line-height: 22px;
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .img {
+        margin-top: 40px;
+        margin-bottom: 80px;
+      }
+    }
+
+  }
+
+}

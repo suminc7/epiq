@@ -1,0 +1,480 @@
+
+@import "../variables";
+
+//colors
+$white: #fff;
+$color_outer_space_approx: #2b333f;
+$color_outer_space_70_approx: rgba(43, 51, 63, 0.7);
+$color_bermuda_gray_approx: #73859f;
+$color_bermuda_gray_50_approx: rgba(115, 133, 159, 0.5);
+$white_30: rgba(255, 255, 255, 0.3);
+$color_bermuda_gray_75_approx: rgba(115, 133, 159, 0.75);
+$black: #000;
+$progress_height: 6px;
+$progress_radius: 6px;
+
+
+//@extend-elements
+//original selectors
+//.video-js .vjs-control-bar, .video-js .vjs-big-play-button, .video-js .vjs-menu-button .vjs-menu-content
+%extend_1 {
+  background-color: $color_outer_space_approx;
+  background-color: $color_outer_space_70_approx;
+  background-color: transparent;
+}
+
+
+.video-js {
+  font-size: 10px;
+  color: $white;
+
+  .vjs-modal-dialog-content {
+    background-color: rgba(0,0,0,0.9);
+  }
+
+
+
+  .vjs-control-bar {
+    bottom: 20px;
+    @extend %extend_1;
+  }
+  .vjs-big-play-button {
+    @extend %extend_1;
+  }
+  .vjs-slider {
+    background-color: $white_30;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    height: 4px;
+  }
+  .vjs-volume-level {
+    background: $white;
+  }
+  .vjs-play-progress {
+    background: $white;
+  }
+  .vjs-slider-bar {
+    background: $white;
+  }
+  .vjs-load-progress {
+    border-radius: $progress_radius;
+    height: $progress_height;
+    background: ligthen($color_bermuda_gray_approx, 25%);
+    background: $color_bermuda_gray_50_approx;
+    div {
+      background: ligthen($color_bermuda_gray_approx, 50%);
+      background: $color_bermuda_gray_75_approx;
+    }
+  }
+  .vjs-menu-button .vjs-menu-content {
+    @extend %extend_1;
+  }
+
+  .vjs-progress-holder .vjs-load-progress, .vjs-progress-holder .vjs-load-progress div, .vjs-progress-holder .vjs-play-progress, .vjs-progress-holder .vjs-tooltip-progress-bar {
+    position: absolute;
+    display: block;
+    height: $progress_height;
+    border-radius: $progress_radius;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    left: 0;
+    top: 0;
+  }
+}
+
+
+
+.vjs-sublime-skin {
+
+
+
+
+  .vjs-big-play-button {
+    font-size: 8em;
+    line-height: 1.5em;
+    height: 1.5em;
+    width: 3em;
+    border: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0.3em;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.5em;
+    margin-top: -0.75em;
+  }
+  .vjs-poster {
+    outline: none;
+    outline: 0;
+  }
+
+  .vjs-play-control {
+
+    height: 40px;
+    margin-top: -5px;
+    margin-left: 15px;
+    &.vjs-paused {
+      background: url(../images/view/btn_play.png) center no-repeat;
+      .svg & {
+        background-image: url(../images/view/btn_play.svg);
+      }
+      &:before {
+        content: "" !important;
+      }
+    }
+
+    &.vjs-playing {
+      background: url(../images/view/btn_pause.png) center no-repeat;
+      .svg & {
+        background-image: url(../images/view/btn_pause.svg);
+      }
+      &:before {
+        content: "" !important;
+      }
+    }
+
+
+
+
+
+  }
+
+  .vjs-fullscreen-control {
+    //border: 3px solid $white;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-right: 15px;
+    &:before {
+      content: '';
+    }
+    background: url(../images/view/btn_fullscreen.png) center no-repeat;
+    .svg & {
+      background-image: url(../images/view/btn_fullscreen.svg);
+    }
+  }
+
+
+
+  .resolution-menu {
+    display: none;
+    text-align: left;
+    position: absolute;
+    bottom: 57px;
+    right: 23px;
+    margin-left: -50px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #dbdddf;
+
+    &:hover {
+      display: block;
+    }
+
+    &:before {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      content: "";
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #ddd;
+      display: inline-block;
+      margin-left: -8px;
+    }
+    &:after {
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      content: "";
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #fff;
+      display: inline-block;
+      margin-left: -7px;
+    }
+
+    li {
+      a {
+        width: 100px;
+        padding: 8px 11px;
+        display: block;
+        font-size: 12px;
+        &.active {
+          cursor: default;
+          background: url(../images/view/icon_checked.png) 75px center no-repeat;
+          .svg & {
+            background-image: url(../images/view/icon_checked.svg);
+          }
+        }
+        &:hover {
+          background-color: $color-gray6;
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+
+  .vjs-setting-menu-button {
+    position: relative;
+    background: url(../images/view/btn_setting.png) center no-repeat;
+    .svg & {
+      background-image: url(../images/view/btn_setting.svg);
+    }
+
+    //&:hover {
+    //  .resolution-menu {
+    //    display: block;
+    //  }
+    //}
+
+  }
+
+  .vjs-progress-holder {
+    margin: 0;
+    border-radius: $progress_radius;
+    height: $progress_height;
+  }
+
+
+  .vjs-progress-control {
+    margin-right: 40px;
+    margin-left: 15px;
+
+    .vjs-load-progres {
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    }
+    .vjs-play-progress {
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    }
+    .vjs-progress-holder:after {
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
+      display: block;
+    }
+  }
+  .vjs-playback-rate {
+    display: none;
+  }
+  .vjs-time-control {
+    right: 40px;
+  }
+  .vjs-mute-control {
+    &:before {
+      content: '';
+    }
+    &.vjs-vol-0:before {
+      content: '';
+    }
+    &.vjs-vol-1:before {
+      content: '';
+    }
+    &.vjs-vol-2:before {
+      content: '';
+    }
+  }
+
+
+
+
+
+  .vjs-volume-menu-button {
+
+    &:before {
+      content: '';
+    }
+    &.vjs-vol-0:before {
+      content: '';
+    }
+    &.vjs-vol-1:before {
+      content: '';
+    }
+    &.vjs-vol-2:before {
+      content: '';
+    }
+  }
+
+  .vjs-menu-button-inline {
+    .vjs-menu {
+      display: block;
+      opacity: 1;
+      left: 0;
+    }
+    &:focus {
+      width: 40px;
+      .vjs-menu {
+        display: block;
+        opacity: 1;
+      }
+    }
+    &.vjs-slider-active {
+      width: 40px;
+      .vjs-menu {
+        display: block;
+        opacity: 1;
+      }
+    }
+    &:hover {
+      width: 40px;
+    }
+  }
+
+  .vjs-current-time {
+    display: block;
+    right: auto;
+    margin-left: 10px;
+    .vjs-current-time-display {
+      font-size: 15px;
+    }
+  }
+
+  .vjs-remaining-time {
+    .vjs-remaining-time-display {
+      font-size: 15px;
+    }
+  }
+
+  .vjs-volume-level {
+    background: url(../images/view/vol-white.png) no-repeat;
+    background-size: 22px 14px;
+    max-width: 22px;
+    max-height: 14px;
+    height: 100%;
+    &:before {
+      content: '';
+    }
+
+
+  }
+  .vjs-volume-bar {
+    background: url(../images/view/vol-trans.png) no-repeat;
+    background-size: 22px 14px;
+    height: 100%;
+    width: 100%;
+    max-width: 22px;
+    max-height: 14px;
+    margin: 7px auto;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+  }
+  &:hover .vjs-big-play-button {
+    background-color: transparent;
+  }
+  &.vjs-fullscreen .vjs-fullscreen-control {
+    //background: $white;
+
+
+    &:before {
+      content: '';
+    }
+    &:after {
+      background: $black;
+      content: "";
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 5px;
+      width: 5px;
+    }
+  }
+  .vjs-menu-button .vjs-menu-content {
+    width: 3em;
+  }
+  .vjs-mouse-display:before {
+    content: '';
+  }
+  .vjs-mouse-display {
+    display: none!important;
+  }
+  .vjs-play-progress:before {
+    content: '';
+  }
+  .vjs-play-progress:after {
+    display: none!important;
+  }
+
+
+  .vjs-VR-control {
+    display: none;
+  }
+
+
+
+  &.vjs-has-started.vjs-user-inactive.vjs-playing .top-menu {
+    visibility: visible;
+    opacity: 0;
+    -webkit-transition: visibility 1s,opacity 1s;
+    -moz-transition: visibility 1s,opacity 1s;
+    -o-transition: visibility 1s,opacity 1s;
+    transition: visibility 1s,opacity 1s;
+  }
+  .top-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/view/player_shadow_top.png) center repeat-x;
+    width: 100%;
+    height: 64px;
+  }
+  .vjs-shadow-bottom {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    background: url(../images/view/player_shadow_bottom.png) center repeat-x;
+    width: 100%;
+    height: 80px;
+  }
+
+  .content-side-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    li {
+      float: left;
+      a {
+        width: 56px;
+        height: 56px;
+        display: block;
+        .svg & {
+          background-image: url(../images/view/btns_player.svg);
+        }
+      }
+    }
+    .like {
+      background: url(../images/view/btns_player.png) 0 0 no-repeat;
+      &:hover {
+        background-position: 0 -56px;
+      }
+      &.active {
+        background-position: 0 -112px;
+      }
+    }
+    .share {
+      display: none;
+      background: url(../images/view/btns_player.png) -56px 0 no-repeat;
+      &:hover {
+        background-position: -56px -56px;
+      }
+    }
+    .playlist {
+      display: none;
+      background: url(../images/view/btns_player.png) -112px 0 no-repeat;
+      &:hover {
+        background-position: -112px -56px;
+      }
+    }
+    .report {
+      background: url(../images/view/btns_player.png) -168px 0 no-repeat;
+      &:hover {
+        background-position: -168px -56px;
+      }
+    }
+  }
+
+
+
+}

@@ -1,0 +1,17 @@
+@import "../variables";
+
+#wrap {
+
+  .mark-pro {
+    padding: 2px 8px;
+    font-size: 11px;
+    color: $color-title;
+    border-radius: 20px;
+    border: 1px solid $color-title;
+    margin-left: 10px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+}

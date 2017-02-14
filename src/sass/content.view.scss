@@ -1,0 +1,525 @@
+@import "variables";
+@import "extend";
+
+.content-view {
+
+
+
+
+  $content-default-width: $max-width-default-query;
+  $content-medium-width: $medium-width-query;
+
+  .player-container {
+    padding: 30px 0 60px 0;
+    display: inline-block;
+    margin: 0 auto;
+
+
+
+
+    .player-content {
+      float: left;
+      margin-right: 10px;
+
+
+
+      #player {
+
+        background-color: #dddddd;
+        position: relative;
+
+
+        .video-js {
+
+          width: 940px;
+          height: 529px;
+
+          @media screen and (max-width: $content-default-width) {
+            width: 800px;
+            height: 450px;
+          }
+          @media screen and (max-width: $content-medium-width) {
+            width: 620px;
+            height: 349px;
+          }
+
+          .vjs-video-canvas {
+            width: 100% !important;
+            height: 100% !important;
+          }
+
+
+        }
+
+        #guide {
+          display: none;
+          background-color: rgba(0,0,0,0.8);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          &.active {
+            display: block;
+          }
+
+          .lt {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+
+          }
+          .rt {
+            position: absolute;
+            right: 0;
+            top: 0;
+            .icon {
+              width: 56px;
+              height: 56px;
+              float: right;
+            }
+          }
+          .rb {
+            position: absolute;
+            right: 15px;
+            bottom: 20px;
+            .icon {
+              width: 40px;
+              height: 30px;
+              float: right;
+            }
+          }
+
+          .icon {
+            position: relative;
+            .txt {
+              white-space: nowrap;
+              color: $color-acua;
+              font-size: 14px;
+            }
+          }
+
+          .close-btn {
+            background: url(../images/view/btn_close.png) center no-repeat;
+            width: 25px;
+            height: 25px;
+            float: left;
+            display: block;
+            margin-right: 27px;
+          }
+          .checkbox {
+            margin: 3px 0;
+            .checkbox-label {
+              color: white;
+              font-size: 13px;
+            }
+          }
+
+          .center {
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 400px;
+            height: 200px;
+            margin: -100px 0 0 -200px;
+            color: $color-acua;
+            font-size: 14px;
+            .img {
+              background: url(../images/view/mouse_rotation.png) center no-repeat;
+              .svg & {
+                background: url(../images/view/mouse_rotation@2x.png) center no-repeat;
+                background-size: contain;
+              }
+              width: 180px;
+              height: 170px;
+              margin: 0 auto 30px auto;
+            }
+          }
+
+          .like {
+            background: url(../images/view/btns_player.png) 0 0 no-repeat;
+            .svg & {
+              background: url(../images/view/btns_player.svg) 0 0 no-repeat;
+            }
+            .txt {
+              position: absolute;
+              right: 75px;
+              top: 17px;
+              &:before {
+                width: 25px;
+                height: 6px;
+                position: absolute;
+                right: -30px;
+                top: 7px;
+                content: '';
+                background: url(../images/view/line_like.png) 0 0 no-repeat;
+                .svg & {
+                  background: url(../images/view/line_like@2x.png) 0 0 no-repeat;
+                  background-size: contain;
+                }
+              }
+            }
+
+          }
+          .report {
+            background: url(../images/view/btns_player.png) -168px 0 no-repeat;
+            .svg & {
+              background: url(../images/view/btns_player.svg) -168px 0 no-repeat;
+            }
+            .txt {
+              position: absolute;
+              right: 45px;
+              top: 62px;
+              &:before {
+                width: 17px;
+                height: 25px;
+                position: absolute;
+                right: -20px;
+                top: -13px;
+                content: '';
+                background: url(../images/view/line_report.png) 0 0 no-repeat;
+                .svg & {
+                  background: url(../images/view/line_report@2x.png) 0 0 no-repeat;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+          .fullscreen {
+            background: url(../images/view/btn_fullscreen.png) center no-repeat;
+            .svg & {
+              background-image: url(../images/view/btn_fullscreen.svg);
+            }
+            .txt {
+              text-align: center;
+              width: 60px;
+              position: absolute;
+              right: -9px;
+              bottom: 60px;
+              line-height: 16px;
+
+              &:before {
+                width: 6px;
+                height: 25px;
+                position: absolute;
+                right: 27px;
+                bottom: -28px;
+                content: '';
+                background: url(../images/view/line_fullscreen.png) 0 0 no-repeat;
+                .svg & {
+                  background: url(../images/view/line_fullscreen@2x.png) 0 0 no-repeat;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+          .setting {
+            background: url(../images/view/btn_setting.png) center no-repeat;
+            .svg & {
+              background-image: url(../images/view/btn_setting.svg);
+            }
+            .txt {
+              position: absolute;
+              right: 40px;
+              bottom: 60px;
+              &:before {
+                width: 19px;
+                height: 39px;
+                position: absolute;
+                right: -23px;
+                bottom: -28px;
+                content: '';
+                background: url(../images/view/line_setting.png) 0 0 no-repeat;
+                .svg & {
+                  background: url(../images/view/line_setting@2x.png) 0 0 no-repeat;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+
+        }
+
+
+      }
+
+      .player-bottom {
+        width: 940px;
+        @media screen and (max-width: $content-default-width) {
+          width: 800px;
+        }
+        @media screen and (max-width: $content-medium-width) {
+          width: 620px;
+        }
+
+        .video-info-head {
+          padding: 28px 30px 30px 30px;
+          .video-content {
+            .video-title {
+              .coin {
+                display: inline-block;
+                background: url("../images/common/icon_coin.png") center no-repeat;
+                width: 22px;
+                height: 30px;
+                vertical-align: sub;
+              }
+              .i19 {
+                display: inline-block;
+                background: url("../images/common/icon_19.png") center no-repeat;
+                width: 22px;
+                height: 30px;
+                vertical-align: sub;
+              }
+
+              .lock {
+                padding-left: 20px;
+                background: url("../images/common/icon_lock2.png") no-repeat left;
+                .svg & {
+                  background: url("../images/common/icon_lock2.svg") no-repeat left;
+                }
+              }
+
+            }
+          }
+          .sns-btn {
+            float: right;
+            display: block;
+            width: 52px;
+            height: 52px;
+            background: url(../images/common/btn_share.png) no-repeat center;
+            border: 1px solid $color-gray6;
+            border-radius: 3px;
+            .svg & {
+              background: url(../images/common/btn_share@2x.png) no-repeat center;
+              background-size: 20px 22px;
+            }
+          }
+        }
+        .video-detail {
+          border-top: 1px solid $color-gray3;
+          padding: 0 30px;
+          .description {
+            font-size: 13px;
+            color: $color-title;
+            padding: 24px 0;
+            //border-bottom: 1px solid $color-gray3;
+          }
+        }
+        .desc-more {
+          padding: 10px 0;
+          text-align: center;
+          a {
+            font-size: 13px;
+            color: #8b93a0;
+          }
+        }
+      }
+
+
+
+    }
+    .recommend-container {
+      float: left;
+      width: 460px;
+      min-height: 500px;
+      background-color: white;
+      text-align: left;
+      padding: 18px 20px 18px 20px;
+      @extend .boxShadow;
+
+
+      @media screen and (max-width: $content-default-width) {
+        width: 440px;
+        padding: 18px 10px 18px 10px;
+      }
+
+      @media screen and (max-width: $content-medium-width) {
+        width: 400px;
+        padding: 18px 10px 18px 10px;
+      }
+
+
+      .video-info {
+
+        @media screen and (max-width: $content-medium-width) {
+          width: 215px;
+        }
+      }
+
+      .video-title {
+        width: 210px;
+        margin-bottom: 4px;
+        font-weight: 400;
+        color: $color-title;
+        line-height: 19px;
+      }
+
+
+      .title {
+        font-size: 18px;
+        color: $color-title;
+        font-weight: 400;
+        word-break: break-all;
+        white-space: normal;
+      }
+      .list {
+        margin-top: 18px;
+
+      }
+
+    }
+
+  }
+
+
+
+
+
+
+}
+
+
+.popup.report-complete {
+  width: 460px;
+  height: 295px;
+  margin: -148px 0 0 -230px;
+
+  .title {
+    color: $color-title;
+  }
+
+  .desc {
+    font-size: 13px;
+    margin: 25px 0 30px 0;
+  }
+
+  .btns {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+
+.popup.report {
+  width: 580px;
+  height: 550px;
+  margin: -275px 0 0 -290px;
+
+  .title {
+    color: $color-title;
+  }
+
+  .radio-container {
+    margin: 30px 0 15px 0;
+    border-top: 1px solid #dbdddf;
+    border-bottom: 1px solid #dbdddf;
+    padding: 30px 0;
+
+    .radio {
+      color: $color-title;
+      font-size: 13px;
+      margin-top: 22px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .btns {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+
+}
+
+
+.popup.sns {
+  width: 580px;
+  height: 348px;
+  margin: -174px 0 0 -290px;
+
+  .title {
+    color: $color-title;
+  }
+  .sns-wrap {
+    font-size: 13px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    a {
+      width: 105px;
+      font-size: 13px;
+      text-align: center;
+      padding-top: 62px;
+      display: inline-block;
+    }
+
+    .facebook {
+      background: url(../images/view/btn_facebook.png) no-repeat center top;
+      .svg & {
+        background: url(../images/view/btn_facebook@2x.png) no-repeat center top;
+        background-size: 56px;
+      }
+    }
+    .twitter {
+      background: url(../images/view/btn_twitter.png) no-repeat center top;
+      .svg & {
+        background: url(../images/view/btn_twitter@2x.png) no-repeat center top;
+        background-size: 56px;
+      }
+    }
+    .naver {
+      background: url(../images/view/btn_naver.png) no-repeat center top;
+      .svg & {
+        background: url(../images/view/btn_naver@2x.png) no-repeat center top;
+        background-size: 56px;
+      }
+    }
+    .kakao {
+      background: url(../images/view/btn_kakao.png) no-repeat center top;
+      .svg & {
+        background: url(../images/view/btn_kakao@2x.png) no-repeat center top;
+        background-size: 56px;
+      }
+    }
+    .google {
+      background: url(../images/view/btn_google.png) no-repeat center top;
+      .svg & {
+        background: url(../images/view/btn_google@2x.png) no-repeat center top;
+        background-size: 56px;
+      }
+    }
+  }
+
+  .link-container {
+    .link-title {
+      font-size: 13px;
+      color: $color-title;
+      margin-bottom: 15px;
+    }
+
+    input {
+      border: 1px solid $color-gray1;
+      width: 400px;
+      height: 32px;
+      padding: 3px 8px;
+      float: left;
+    }
+    .copy-btn {
+      width: 68px;
+      height: 32px;
+      float: left;
+      display: block;
+      margin-left: 10px;
+    }
+  }
+
+
+}

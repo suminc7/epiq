@@ -1,0 +1,95 @@
+
+@import "../variables";
+
+#header {
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  min-width: $max-width-medium;
+
+  .header-blind {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    &.active {
+      display: block;
+      opacity: 0;
+    }
+  }
+
+
+  .app {
+    height: 52px;
+    background-color: $color-title;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3;
+    color: white;
+
+    .app-inner {
+      padding: 16px 0;
+      max-width: $max-width-default;
+      text-align: left;
+      margin: 0 auto;
+      @media screen and (max-width: $max-width-default-query) {
+        padding: 16px 20px;
+      }
+    }
+    .epiqapp {
+      color: $color-acua;
+      font-weight: 400;
+    }
+
+    .google-play{
+      margin-top: -6px;
+      margin-left: 10px;
+      display: inline-block;
+      float: right;
+      font-size: 0;
+      span {
+        margin-left: 10px;
+      }
+
+      a {
+        width: 110px;
+        height: 32px;
+        display: inline-block;
+      }
+
+      .btn-google {
+        background: url("../images/common/btn_googleplay.png") no-repeat center;
+        .svg & {
+          background: url("../images/common/btn_googleplay@2x.png") no-repeat center;
+          background-size: contain;
+        }
+      }
+
+      .btn-appstore {
+        background: url("../images/common/btn_appstore.png") no-repeat center;
+        .svg & {
+          background: url("../images/common/btn_appstore@2x.png") no-repeat center;
+          background-size: contain;
+        }
+      }
+
+
+      .comingsoon {
+        font-size: 10px;
+        padding: 10px 0;
+        display: inline-block;
+        color: #5d5e63;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+
+
+}
+

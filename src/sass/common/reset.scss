@@ -1,0 +1,86 @@
+@import "../variables";
+
+html,body{width:100%;height:100%;font-family:$font-family;font-weight: 300;}
+html{}//overflow-y:scroll; scrollTop 0 때문에 삭제
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
+body,h1,h2,h3,h4,input,button,textarea{
+  font-family:$font-family;font-size:12px;color:$color-default;font-weight: 300;
+}
+body{background-color:#fff;text-align:center;*word-break:break-all;-ms-word-break:break-all}
+img,fieldset,iframe{border:0 none}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+button{margin:0;padding:0}
+a{color:$color-default;text-decoration:none}
+a:hover{text-decoration:none}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+input::-ms-clear{display:none}
+input, button { border:none; }
+
+body {
+  .wsafari & {
+    font-family:$font-family-safari;
+  }
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cb:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+html {
+  &.side {
+    overflow-y:auto;
+  }
+}
+
+body {
+  min-width: $max-width-medium;
+  overflow-x: hidden; // ie 11에서 가로 스크롤 보여 추가함. // 11.18
+}
+#wrap {
+  background-color: #F1F4F6;
+  overflow: hidden; // mobile 에서 오른쪽 20px 잘려서 추가 01.06
+  #content {
+    padding-bottom: 60px;
+    padding-top: 116px;
+  }
+}
+
+.index, .channel, .premium, .vrstar, .about {
+  #wrap {
+    #content {
+      padding-top: 52px;
+    }
+  }
+}
+input[type=text], input[type=password] {
+  outline: none;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background: none;
+}
