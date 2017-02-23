@@ -12,15 +12,7 @@ export default class NaverLogin extends SNSLogin {
         var naver = null;
         const href = window.location.href;
         const callbackUrl = window.location.origin + '/user/callback';
-        if(href.indexOf('iptime.org') > 0){
-            naver = new window.naver_id_login('D1yedquVAPPxHP3TJ2U9', callbackUrl);
-        }else if(href.indexOf('ing.'+Const.domain) > 0){
-            naver = new window.naver_id_login('v1GBgIDTeNgg93Z8cRd5', callbackUrl);
-        }else if(href.indexOf(Const.domain) > 0){
-            naver = new window.naver_id_login('Gsg5WyOWDlU7Ju4sRBnM', callbackUrl);
-        }else{
-            naver = new window.naver_id_login('Gsg5WyOWDlU7Ju4sRBnM', callbackUrl);
-        }
+		naver = new window.naver_id_login('D1yedquVAP', callbackUrl);
 
         var state = naver.getUniqState();
         // naver.setButton("white", 2,40);

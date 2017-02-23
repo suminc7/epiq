@@ -7,7 +7,7 @@ export default class KakaoLogin {
 
     init(){
 
-        Kakao.init('4747bbb9c3185f002bb2dfa01a657817');
+        Kakao.init('4747bbb9c3');
 
         $('.kakao a').bind('click', e => {
             this.login();

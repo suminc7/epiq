@@ -7,13 +7,6 @@ export default class FacebookLogin extends SNSLogin {
 
 
         let appId = "";
-        if(window.location.href.indexOf(Const.domain) > 0){
-            appId = '161709380902154';
-        }else if(window.location.href.indexOf('iptime.org') > 0){
-            appId = '104013606733669';
-        }else{
-            appId = '847649892038802';
-        }
 
         window.fbAsyncInit = function() {
             FB.init({
